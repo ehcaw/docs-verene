@@ -1,13 +1,18 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "who is wache",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "integrations": {
+    "telemetry": {
+      "enabled": true
+    }
+  },
   "navigation": {
     "tabs": [
       {
@@ -15,21 +20,17 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "public": true,
+            "pages": ["index", "quickstart", "development"]
           },
           {
             "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
+            "public": true,
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
+            "public": true,
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -39,6 +40,7 @@
           },
           {
             "group": "AI tools",
+            "public": true,
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
@@ -48,16 +50,72 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Portfolio",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "About",
+            "public": true,
+            "pages": ["portfolio/about"]
+          },
+          {
+            "group": "Experience",
+            "public": true,
             "pages": [
-              "api-reference/introduction"
+              "portfolio/experience/overview",
+              "portfolio/experience/mintlify",
+              "portfolio/experience/amazon",
+              "portfolio/experience/tutoring-center",
+              "portfolio/experience/petanano"
             ]
           },
           {
+            "group": "Projects",
+            "public": true,
+            "pages": [
+              "portfolio/projects/overview",
+              "portfolio/projects/pointer",
+              "portfolio/projects/lsclear",
+              "portfolio/projects/shelly",
+              "portfolio/projects/documix",
+              "portfolio/projects/catdoc",
+              "portfolio/projects/dashi",
+              "portfolio/projects/splat",
+              "portfolio/projects/elitecode"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Movies",
+        "groups": [
+          {
+            "group": "Star Wars",
+            "public": true,
+            "pages": [
+              "movies/star-wars",
+              "movies/star-wars-characters",
+              "movies/star-wars-planets"
+            ]
+          },
+          {
+            "group": "Classic animation",
+            "public": true,
+            "pages": ["movies/tom-and-jerry", "movies/wild-kratts"]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "openapi": ["api-reference/openapi.json"],
+        "groups": [
+          {
+            "group": "API documentation",
+            "public": true,
+            "pages": ["api-reference/introduction"]
+          },
+          {
             "group": "Endpoint examples",
+            "public": true,
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -66,7 +124,17 @@
             ]
           }
         ]
-      }
+      },
+      {
+        "tab": "Private",
+        "groups": [
+          {
+            "group": "Internal",
+            "pages": ["private/overview", "private/secrets"]
+          }
+        ]
+      },
+      { "$ref": "./plugins/soundcheck/pages.json" }
     ],
     "global": {
       "anchors": [
@@ -102,21 +170,32 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/wacheeeeee",
+      "github": "https://github.com/ehcaw",
+      "linkedin": "https://linkedin.com/in/ryannguyenc"
+    }
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "description": "Check [google](https://google.com)"
+    }
+  },
+  "api": {
+    "params": {
+      "post": ["format", "x-sensitivity", "x-beta", "x-priority", "x-tags", "x-config"]
     }
   }
 }
